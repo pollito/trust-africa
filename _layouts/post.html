@@ -1,0 +1,44 @@
+---
+layout: base
+---
+<div class="container story {{ page.name }}">
+  <div class="{{ page.name }}">
+    <div class="content {{ page.name }}">
+      <h2 class="story-title {{ page.name }}">{{ page.story-title }}
+        <div class="page-share pull-right" role="group">
+          <a href="#" class="twitter"><img src="/img/twitter.svg"> Twitter</a>
+          <a href="#" class="facebook"><img src="/img/facebook.svg"> Facebook</a>
+        </div>
+      </h2>
+      <div class="{{ page.name }}">
+        {{ content }}
+      </div>
+    </div>
+    {% if page.links %}
+    <h2>Stories</h2>
+    <div class="row links">
+      {% for link in page.links %}
+        <div class="single-link col-sm-6">
+          <a href="{{ link.url }}"><img src="/img/stories/{{ link.image }}"></a>
+          <div class="info">
+            <div class="title"><a href="{{ link.url }}">{{ link.title }}</a></div>
+            <div class="author">{{ link.author }}</div> 
+            <div>
+              <span class="paper">{{ link.paper }} | </span>
+              <span class="date">{{ link.date | date: "%B %d, %Y" }}</span>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    {% endif %}
+    </div>
+  </div>
+</div>
+
+<script>
+  $(".more-start").nextUntil(".more-end").addClass("hidden more");
+  $(".unhide").click(function() {
+    $(".more").removeClass("hidden");
+    $(this).addClass("hidden");
+  });
+</script>
