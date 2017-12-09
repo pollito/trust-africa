@@ -1,8 +1,5 @@
 ---
 ---
-@import 'bulma/utilities/all';
-@import 'bulma/grid/columns';
-
 $gold: #FAB600;
 $beige: #A98459;
 $brown: #7C4B08;
@@ -10,3 +7,25 @@ $blue: #0081AB;
 $navy: #006293;
 $deep-brown: #532409;
 
+html {
+  border-top: 3px solid $gold;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+nav {
+  img {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+.single-story {
+  -webkit-box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+  color: #4a4a4a;
+  max-width: 100%;
+  position: relative;
+}
