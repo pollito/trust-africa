@@ -6,13 +6,11 @@ $brown: #7C4B08;
 $blue: #0081AB;
 $navy: #006293;
 $deep-brown: #532409;
+$twitter: #17a2f3;
+$facebook: #385899;
 
 html {
   border-top: 3px solid $gold;
-}
-
-body {
-  font-family: "Open Sans", sans-serif;
 }
 
 nav {
@@ -22,76 +20,116 @@ nav {
   }
 }
 
-.badge-primary {
-  background-color: $navy;
-  &:hover {
-    background-color: $navy !important;
-  }
-}
-
-.badge-secondary {
-  background-color: $beige;
-  &:hover {
-    background-color: $beige !important;
-  }
-}
-
 .single-story {
-  -webkit-box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
-  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
-  color: #4a4a4a;
-  max-width: 100%;
-  position: relative;
-  border-radius: 4px;
-  .single-story-content {
-    padding: 10px;
-    .story-title {
-    }
-    .story-author {
-      color: #999;
-    }
-    .story-summary {
-      margin-top: 20px;
+  height: 100%;
+  img {
+    width: 100%;
+  }
+  .card-content {
+    padding-bottom: 60px;
+  }
+  .card-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+}
+
+.story-details {
+  display: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fbfbfb;
+  z-index: 100;
+  .tag.is-delete {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 0;
+    background-color: #e8e8e8;
+    &:hover {
+      background-color: darken(#e8e8e8, 10%);
     }
   }
-  .story-footer {
-    border-top: 1px solid #dbdbdb;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    .story-footer-item {
-      padding: 10px;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-preferred-size: 0;
-      flex-basis: 0;
-      -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-      flex-grow: 1;
-      -ms-flex-negative: 0;
-      flex-shrink: 0;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      justify-content: center;
-      color: $blue;
-      &:first-of-type {
-        border-right: 1px solid #dbdbdb;
-        border-bottom-left-radius: 4px;
-      }
-      &:last-of-type {
-        border-bottom-right-radius: 4px;
-      }
+  .meta, .attribution {
+    margin-bottom: 1rem;
+  }
+  .read {
+    .button {
+      background-color: $gold;
       &:hover {
-        color: $navy;
-        text-decoration: none;
+        background-color: darken($gold, 3%);
       }
+    } 
+  }
+  .title {
+    font-size: 1.25rem;
+    padding-bottom: 12px;
+  }
+  .subtitle {
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+}
+
+.tag {
+  &.publication {
+    background-color: $gold;
+    color: #fff;
+    &:hover {
+      color: #fff;
+      background-color: darken($gold, 10%);
     }
   }
+  &.twitter {
+    background-color: $blue;
+    color: #fff;
+    &:hover {
+      color: #fff;
+      background-color: $navy;
+      text-decoration: none;
+    }
+  }
+}
+
+.card-content {
+  .title {
+    font-size: 1.5rem;
+  }
+}
+
+.page-share {
+  position: relative;
+  z-index: 120;
+}
+
+a {
+  color: $blue;
+  &:hover {
+    color: $navy;
+  }
+}
+
+.twitter {
+  color: $twitter;
+    &:hover {
+      color: darken($twitter, 10%);
+    }
+}
+
+.facebook {
+  color: $facebook;
+    &:hover {
+      color: darken($facebook, 10%);
+    }
+}
+
+.email {
+  color: $gold;
+    &:hover {
+      color: darken($gold, 10%);
+    }
 }

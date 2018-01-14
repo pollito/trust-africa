@@ -23,3 +23,6 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 markdown: kramdown
 sass:
   sass_dir: _sass
+
+collections:
+  stories:

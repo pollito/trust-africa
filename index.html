@@ -1,44 +1,63 @@
 ---
 layout: base
 ---
-<div class="container">
-  <div class="row">
-    <div class="col-md-6">
-      <article class="single-story">
-        <div class="single-story-content">
-          <div class="story-title">
-            <h3>Jackpot Lottery – How One Company Hides Its Billions</h3>
+<section class="section">
+  <div class="container">
+  <div class="columns is-multiline">
+    {% for story in site.stories %}
+    <div class="column is-half-tablet is-one-third-desktop">
+      <article id="{{ story.name }}" class="card single-story">
+        <picture>
+          <a href="#"><img src="img/{{ story.image }}"></a>
+        </picture>
+        <div class="card-content">
+          <div class="title">
+            <a href="#">{{ story.title }}</a>
           </div>
-          <div class="story-author">
-            Written by Khadija Sharife, edited/byline by Jeff Lowenstein
-          </div>
-          <div class="story-meta">
-            <a href="" class="badge badge-secondary">World Policy Journal</a>
-            <a href="" class="badge badge-primary">@trustafrica</a>
-            <a href="" class="badge badge-primary">#Gamingthelottery</a>
-            <a href="" class="badge badge-primary">#IFF</a>
-          </div>
-          <div class="story-summary">
+          <div class="summary">
             <p>
-              Gtech engaged in corporate inversion with IGT to slash its tax rate from 35% to 18%; holds $2b offshore, avoids $600m in jurisdictions where real economic activity occurs.
+              {{ story.summary }}
             </p>
-            <ul>
-              <li>Exposes technique of corporate inversion used by Gtech during merger with IGT that slashed tax rates in half (35% to 18%)</li>
-              <li>Exposes $700 million in avoided tax annually where real economic activity takes place</li>
-              <li>Exposes offshore earnings of $2 billion</li>
-              <li>Exposes how this happened through Cyprus-based holding entity that received “fees” from subsidiaries located in real countries like SA, India, etc. Revenue of $200m with earnings of $600 million withheld.</li>
-            </ul>
           </div>
         </div>
-        <div class="story-footer">
-          <a class="story-footer-item share" href="">
-            Share
-          </a>
-          <a class="story-footer-item read" href="">
-            Read
-          </a>
+        <!-- <footer class="card-footer">
+          <a href="#" class="card-footer-item">Read story</a>
+        </footer> -->
+        <footer class="card-footer page-share">
+          <a href="#" class="card-footer-item twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+          <a href="#" class="card-footer-item facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+          <a href="#" class="card-footer-item email"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+        </footer>
+
+        <div class="card-content story-details">
+          <a class="tag is-delete"></a>
+          <div class="title">
+            {{ story.title }}
+          </div>
+          <div class="subtitle">
+            {{ story.subtitle }}
+          </div>
+          <div class="tags">
+            {% for user in story.user %}
+            <a href="https://twitter.com/{{ user.tag }}" class="tag twitter">@{{ user.tag }}</a>
+            {% endfor %}
+            {% for hashtag in story.hashtag %}
+            <a target="_blank" href="https://twitter.com/search?q=%23{{ hashtag.tag }}" class="tag twitter">#{{ hashtag.tag }}</a>
+            {% endfor %}
+          </div>
+          <div class="meta">
+            <p>{{ story.meta }}</p>
+          </div>
+          <div class="attribution">
+            <p>{{ story.attribution }}</p>
+          </div>
+          <div class="read">
+            <a target="_blank" href="{{ story.external-url }}" class="button is-warning">Read story</a>
+          </div>
         </div>
       </article>
     </div>
+    {% endfor %}
   </div>
-</div>
+  </div>
+</section>
