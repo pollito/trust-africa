@@ -7,6 +7,7 @@ summary: "Manipulation of derivatives trade by inflating fixed interest rate pro
 meta: "This story was published by OCCRP using publicly accessible sources and sourced information."
 attribution: "Trust Africa supported this project."
 external-url: https://www.occrp.org/en/28-ccwatch/cc-watch-indepth/7215-guptas-nedbank-skillfully-extract-money-from-south-african-state-firm
+series: banking
 user:
 - tag: "OCCRP"
 - tag: "trustafrica"

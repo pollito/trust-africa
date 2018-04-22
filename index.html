@@ -5,7 +5,7 @@ layout: base
   <div class="container">
     <div class="columns series">
       <div class="column is-half-tablet col-series">
-        <a href="#">
+        <a onclick="lottery()">
           <img src="img/lottery.jpg">
         </a>
         <div class="series-info">
@@ -16,7 +16,7 @@ layout: base
         </div>
       </div>
       <div class="column is-half-tablet col-series">
-        <a href="#">
+        <a onclick="banking()">
           <img src="img/banks.jpg">
         </a>
         <div class="series-info">
@@ -27,9 +27,23 @@ layout: base
         </div>
       </div>
     </div>
-    <div class="columns is-multiline">
-      {% for story in site.storiess %}
-      <div class="column is-half-tablet is-one-third-desktop">
+    <h1 id="gaming-lottery" class="title series-title series-lottery">Gaming the lottery</h1>
+    <p class="series-lottery">
+      This project seeks to expose the corporate and tax behaviour of lottery titans like International Gaming Technology (G-Tech), who despite ongoing cross-border legal action continue to secure contract after contract with different countries around the world. By targeting the poor using a state-backed “regressive tax” that facilitates low entry fee to low-level gambling, the poor have become patrons of a system that gives them a 1:14 000 000 chance of winning. Statistics compiled by the National Gambling Board and UNISA reveal that more than 75% of South Africans play the lottery; the majority are African people who earn just over R5000 per month. Of this, 70% forego spending on groceries and other basic needs. Damningly, respondents claim that the lottery gives them an opportunity to move out of a vicious cycle imposed on them by the other great lottery: life. In partnership with eNCA and members from Columbia University, OpenUp and OCCRP, and using publicly accessible records and data, the Panama Papers and reportage, we explore the monies siphoned by Gtech - more than $2 billion, and the role played by the lottery that gives hope to desperate peoples in a game where the house always wins.
+    </p>
+    <p class="series-lottery">
+      This project is covered from 3 aspects: Global, South Africa as well as West Africa.
+    </p>
+
+    <h1 id="banking-state-capture" class="title series-title series-banking">Banking on state capture</h1>
+    <p class="series-banking">
+      This package focuses on three stories unraveling the role of banks as fixers in facilitating money laundering through pseudo accounts, pass-thru companies, derivatives manipulations and billions in kickbacks using secrecy veils and jurisdictions. While it obtains data from the #Guptaleaks as an anchor to the bigger picture, the information is exclusively derived from sources in compliance departments to provide project “exclusives”.
+      The ‘respectable’ techniques ‘provided to high risk clients by banks are replicated by criminals, the mafia, corrupt politicians among others. It effectively exposes that banks receive higher fees and bonuses when dealing with riskier transactions, increase capitalisation and which capital enables leveraging on markets for great profit. That is, it is in the best interests of banks to engage in money laundering despite reports brought to them by compliance departments - known, ironically, as “business prevention centers”. It also eliminates the myth of public and private sector corruption as globally, both parties are co-dependent on another.
+    </p>
+
+    <div class="columns is-multiline articles">
+      {% for story in site.stories %}
+      <div class="column is-half-tablet is-one-third-desktop article series-{{ story.series }}">
         <article id="{{ story.name }}" class="card single-story">
           <picture>
             <a href="#"><img src="img/{{ story.image }}"></a>

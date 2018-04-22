@@ -7,6 +7,7 @@ summary: "Nedbank facilitated laundering of more than $100 million from South Af
 meta: "This story was published by OCCRP using publicly accessible sources, sourced information from two banks, and the Guptaleaks."
 attribution: "Trust Africa supported this project."
 external-url: https://www.occrp.org/en/28-ccwatch/cc-watch-indepth/7257-guptas-big-banks-linked-to-south-african-chinese-locomotive-deal
+series: banking
 user:
 - tag: "OCCRP"
 - tag: "trustafrica"

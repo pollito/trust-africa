@@ -7,6 +7,7 @@ summary: "The South African Sports Confederation and Olympic Committee (Sascoc) 
 meta: "This story was published by Daily Maverick using publicly accessible data."
 attribution: "The Fund for Investigative Journalism and Trust Africa supported this project."
 external-url: https://www.dailymaverick.co.za/article/2017-08-31-gaming-the-lottery-billions-pour-into-sa-olympic-bodys-coffers/#.WfwundCWbIU
+series: lottery
 user:
 - tag: "trustafrica"
 hashtag:
