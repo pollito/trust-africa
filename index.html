@@ -3,61 +3,85 @@ layout: base
 ---
 <section class="section">
   <div class="container">
-  <div class="columns is-multiline">
-    {% for story in site.stories %}
-    <div class="column is-half-tablet is-one-third-desktop">
-      <article id="{{ story.name }}" class="card single-story">
-        <picture>
-          <a href="#"><img src="img/{{ story.image }}"></a>
-        </picture>
-        <div class="card-content">
-          <div class="title">
-            <a href="#">{{ story.title }}</a>
-          </div>
-          <div class="summary">
-            <p>
-              {{ story.summary }}
-            </p>
-          </div>
+    <div class="columns series">
+      <div class="column is-half-tablet col-series">
+        <a href="#">
+          <img src="img/lottery.jpg">
+        </a>
+        <div class="series-info">
+          <h2 class="series-title">Gaming the lottery</h2>
+          <p class="series-summary">
+            <b>Exposing the corporate and tax behaviour of lottery titans</b> like International Gaming Technology (G-Tech), who despite ongoing cross-border legal action continue to secure contract after contract with different countries around the world
+          </p>
         </div>
-        <!-- <footer class="card-footer">
-          <a href="#" class="card-footer-item">Read story</a>
-        </footer> -->
-        <footer class="card-footer page-share">
-          <a href="#" class="card-footer-item twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-          <a href="#" class="card-footer-item facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-          <a href="#" class="card-footer-item email"><i class="fa fa-envelope" aria-hidden="true"></i></a>
-        </footer>
-
-        <div class="card-content story-details">
-          <a class="tag is-delete"></a>
-          <div class="title">
-            {{ story.title }}
-          </div>
-          <div class="subtitle">
-            {{ story.subtitle }}
-          </div>
-          <div class="tags">
-            {% for user in story.user %}
-            <a href="https://twitter.com/{{ user.tag }}" class="tag twitter">@{{ user.tag }}</a>
-            {% endfor %}
-            {% for hashtag in story.hashtag %}
-            <a target="_blank" href="https://twitter.com/search?q=%23{{ hashtag.tag }}" class="tag twitter">#{{ hashtag.tag }}</a>
-            {% endfor %}
-          </div>
-          <div class="meta">
-            <p>{{ story.meta }}</p>
-          </div>
-          <div class="attribution">
-            <p>{{ story.attribution }}</p>
-          </div>
-          <div class="read">
-            <a target="_blank" href="{{ story.external-url }}" class="button is-warning">Read story</a>
-          </div>
+      </div>
+      <div class="column is-half-tablet col-series">
+        <a href="#">
+          <img src="img/banks.jpg">
+        </a>
+        <div class="series-info">
+          <h2 class="series-title">Banking on state capture</h2>
+          <p class="series-summary">
+            Unraveling the role of banks as fixers in facilitating money laundering through pseudo accounts, pass-through companies, derivatives manipulations and billions in kickbacks using secrecy veils and jurisdictions
+          </p>
         </div>
-      </article>
+      </div>
     </div>
-    {% endfor %}
-  </div>
+    <div class="columns is-multiline">
+      {% for story in site.storiess %}
+      <div class="column is-half-tablet is-one-third-desktop">
+        <article id="{{ story.name }}" class="card single-story">
+          <picture>
+            <a href="#"><img src="img/{{ story.image }}"></a>
+          </picture>
+          <div class="card-content">
+            <div class="title">
+              <a href="#">{{ story.title }}</a>
+            </div>
+            <div class="summary">
+              <p>
+                {{ story.summary }}
+              </p>
+            </div>
+          </div>
+          <!-- <footer class="card-footer">
+            <a href="#" class="card-footer-item">Read story</a>
+          </footer> -->
+          <footer class="card-footer page-share">
+            <a href="#" class="card-footer-item twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a href="#" class="card-footer-item facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="#" class="card-footer-item email"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+          </footer>
+
+          <div class="card-content story-details">
+            <a class="tag is-delete"></a>
+            <div class="title">
+              {{ story.title }}
+            </div>
+            <div class="subtitle">
+              {{ story.subtitle }}
+            </div>
+            <div class="tags">
+              {% for user in story.user %}
+              <a href="https://twitter.com/{{ user.tag }}" class="tag twitter">@{{ user.tag }}</a>
+              {% endfor %}
+              {% for hashtag in story.hashtag %}
+              <a target="_blank" href="https://twitter.com/search?q=%23{{ hashtag.tag }}" class="tag twitter">#{{ hashtag.tag }}</a>
+              {% endfor %}
+            </div>
+            <div class="meta">
+              <p>{{ story.meta }}</p>
+            </div>
+            <div class="attribution">
+              <p>{{ story.attribution }}</p>
+            </div>
+            <div class="read">
+              <a target="_blank" href="{{ story.external-url }}" class="button is-warning">Read story</a>
+            </div>
+          </div>
+        </article>
+      </div>
+      {% endfor %}
+    </div>
   </div>
 </section>
