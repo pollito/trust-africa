@@ -1,5 +1,5 @@
 ---
-name: sa-lottery
+name: lotty-money-spent
 image: lotty-money-spent.jpg
 title: "How the Lotto money is spent"
 subtitle: "Written by Roxanne Joseph and Raymond Joseph"

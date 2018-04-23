@@ -1,5 +1,5 @@
 ---
-name: olympic-body
+name: olympics
 image: olympics.jpg
 title: "Billions pour into SA Olympic body’s coffers"
 subtitle: "Written by Raymond Joseph, data analysis by Roxanne Joseph"
@@ -11,6 +11,6 @@ series: lottery
 user:
 - tag: "trustafrica"
 hashtag:
-- tag: "Gamingthelottery"
+- tag: "GamingTheLottery"
 - tag: "IFF"
 ---

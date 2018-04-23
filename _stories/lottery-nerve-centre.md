@@ -11,6 +11,6 @@ series: lottery
 user:
 - tag: "trustafrica"
 hashtag:
-- tag: "Gamingthelottery"
+- tag: "GamingTheLottery"
 - tag: "IFF"
 ---
